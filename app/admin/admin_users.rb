@@ -17,20 +17,20 @@ ActiveAdmin.register AdminUser do
   filter :created_at
 
 # add new admin without sending email
-  # form do |f|
-  #   f.inputs do
-  #     f.input :email
-  #     f.input :password
-  #     f.input :password_confirmation
-  #   end
-  #   f.actions
-  # end
-# add new admin with password then send email with invitation link and set password from there
   form do |f|
-    f.inputs "Add new Admin Email"do
+    f.inputs do
       f.input :email
+      f.input :password
+      f.input :password_confirmation
     end
     f.actions
   end
+# add new admin with password then send email with invitation link and set password from there
+  # form do |f|
+  #   f.inputs "Add new Admin Email"do
+  #     f.input :email
+  #   end
+  #   f.actions
+  # end
 
 end
